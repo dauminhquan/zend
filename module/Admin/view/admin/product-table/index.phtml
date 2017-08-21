@@ -1,0 +1,146 @@
+<div class="right_col" role="main">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Tables <small>Some examples to get you started</small></h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+                <div class="x_panel">
+                    <div class="x_content">
+                        <div class=" row dataTables_wrapper form-group">
+                            <table class="table jambo_table bulk_action" id="product_table">
+                                <thead>
+                                <tr class="headings">
+                                    <th>
+                                        <input type="checkbox" id="check-all" class="flat">
+                                    </th>
+                                    <th class="column-title">Mã SP </th>
+                                    <th class="column-title">Ảnh đại diện </th>
+                                    <th class="column-title">Tên </th>
+                                    <th class="column-title">Số lượng</th>
+                                    <th class="column-title">Nhóm </th>
+                                    <th class="column-title">Loại </th>
+                                    <th class="bulk-actions inline" colspan="7">
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="action-cnt"> </span>
+                                                <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" id="delete">Xóa mục đã chọn</a></li>
+                                                <li><a href="#" id="show">Hiển thị</a></li>
+                                                <li><a href="#" id="disshow">Không hiển thị</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </th>
+
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <?php
+                                foreach ($this->data as $result)
+                                {
+                                    echo '<tr >
+                                    <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records" id="#product_'.$result['id_sanpham'].'">
+                                    </td>
+                                    <td class=" ">#'.$result['id_sanpham'].'</td>
+                                    <td class=" "><img src="'.$result['url'].'" class="image_product"></td>
+                                    <td class=" "><a href="#">'.$result['tensanpham'].'</a></td>
+                                    <td class=" ">'.$result['soluong'].'</td>
+                                    <td class=" "><a href="#">'.$result['tennhomsanpham'].'</a></td>
+                                    <td ><a href="#">'.$result['tenloaisanpham'].'</a> </td>
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+                                <tr >
+                                    <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records" id="121000040">
+                                    </td>
+                                    <td class=" ">121000040</td>
+                                    <td class=" "><img src="https://www.google.com.vn/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="image_product"></td>
+                                    <td class=" "><a href="#">Tên sản phẩm</a></td>
+                                    <td class=" ">100</td>
+                                    <td class=" "><a href="#">Nhóm sản phẩm </a></td>
+                                    <td ><a href="#">Loại sản phẩm</a> </td>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                    </td>
+                                    <td class=" ">121000039</td>
+                                    <td class=" ">May 23, 2014 11:30:12 PM</td>
+                                    <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                                    </td>
+                                    <td class=" ">John Blank L</td>
+                                    <td class=" ">Paid</td>
+                                    <td class="a-right a-right ">$741.20</td>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+
+        </div>
+</div>
+<!-- jQuery -->
+<script src="<?= $this->basePath("vendors/jquery/dist/jquery.min.js")?>"></script>
+<!-- Bootstrap -->
+<script src="<?= $this->basePath("vendors/bootstrap/dist/js/bootstrap.min.js")?>"></script>
+<!-- FastClick -->
+<script src="<?= $this->basePath("vendors/fastclick/lib/fastclick.js")?>"></script>
+<!-- NProgress -->
+<script src="<?= $this->basePath("vendors/nprogress/nprogress.js")?>"></script>
+<!-- Chart.js -->
+<script src="<?= $this->basePath("vendors/Chart.js/dist/Chart.min.js")?>"></script>
+<!-- gauge.js -->
+<script src="<?= $this->basePath("vendors/gauge.js/dist/gauge.min.js")?>"></script>
+<!-- bootstrap-progressbar -->
+<script src="<?= $this->basePath("vendors/bootstrap-progressbar/bootstrap-progressbar.min.js")?>"></script>
+<!-- iCheck -->
+<script src="<?= $this->basePath("vendors/iCheck/icheck.min.js")?>"></script>
+<!-- Skycons -->
+<script src="<?= $this->basePath("vendors/skycons/skycons.js")?>"></script>
+<!-- Flot -->
+<script src="<?= $this->basePath("vendors/Flot/jquery.flot.js")?>"></script>
+<script src="<?= $this->basePath("vendors/Flot/jquery.flot.pie.js")?>"></script>
+<script src="<?= $this->basePath("vendors/Flot/jquery.flot.time.js")?>"></script>
+<script src="<?= $this->basePath("vendors/Flot/jquery.flot.stack.js")?>"></script>
+<script src="<?= $this->basePath("vendors/Flot/jquery.flot.resize.js")?>"></script>
+<!-- Flot plugins -->
+<script src="<?= $this->basePath("vendors/flot.orderbars/js/jquery.flot.orderBars.js")?>"></script>
+<script src="<?= $this->basePath("vendors/flot-spline/js/jquery.flot.spline.min.js")?>"></script>
+<script src="<?= $this->basePath("vendors/flot.curvedlines/curvedLines.js")?>"></script>
+<!-- DateJS -->
+<script src="<?= $this->basePath("vendors/DateJS/build/date.js")?>"></script>
+<!-- JQVMap -->
+<script src="<?= $this->basePath("vendors/jqvmap/dist/jquery.vmap.js")?>"></script>
+<script src="<?= $this->basePath("vendors/jqvmap/dist/maps/jquery.vmap.world.js")?>"></script>
+<script src="<?= $this->basePath("vendors/jqvmap/examples/js/jquery.vmap.sampledata.js")?>"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="<?= $this->basePath("vendors/moment/min/moment.min.js")?>"></script>
+<script src="<?= $this->basePath("vendors/bootstrap-daterangepicker/daterangepicker.js")?>"></script>
+<!--datatale-->
+<script src="<?= $this->basePath("build/js/jquery.dataTables.js")?>"></script>
+<!-- Custom Theme Scripts -->
+<script src="<?= $this->basePath("build/js/custom.min.js")?>"></script>
+<!--my js-->
+<script src="<?= $this->basePath("build/js/product_table.js")?>"></script>

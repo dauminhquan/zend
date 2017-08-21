@@ -1,0 +1,15 @@
+.product_face{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image_product
+{
+    width: 150px;
+    height: auto;
+}
+.image_product_face
+{
+    width : 15px;
+    height: auto;
+}
